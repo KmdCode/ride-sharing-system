@@ -18,6 +18,8 @@ namespace Ride_sharing_system.classes
             this.Name = Name;
             this.Email = Email;
             this.Password = Password;
+            Balance = 100;
+            Role = "passenger";
         }
 
         public void ViewBalance()

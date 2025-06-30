@@ -16,6 +16,8 @@ namespace Ride_sharing_system.classes
             this.Name = Name;
             this.Email = Email;
             this.Password = Password;
+            Balance = 0;
+            Role = "driver";
         }
 
         public void AddFunds(decimal amount)
