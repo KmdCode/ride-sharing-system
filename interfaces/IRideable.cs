@@ -8,6 +8,6 @@ namespace Ride_sharing_system.interfaces
 {
     internal interface IRideable
     {
-        void Ride(string pickup, string destination);
+        void RideDetails(string pickup, string destination);
     }
 }

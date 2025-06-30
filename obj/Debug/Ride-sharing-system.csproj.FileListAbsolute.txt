@@ -1,0 +1,8 @@
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\obj\Debug\Ride-sharing-system.csproj.AssemblyReference.cache
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\obj\Debug\Ride-sharing-system.csproj.CoreCompileInputs.cache
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\bin\Debug\Ride-sharing-system.exe.config
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\bin\Debug\Ride-sharing-system.exe
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\bin\Debug\Ride-sharing-system.pdb
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\obj\Debug\Ride-sharing-system.exe
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\obj\Debug\Ride-sharing-system.pdb
+C:\Users\Karabo\Documents\c# practices\Ride-sharing-system\obj\Debug\Ride-sharing-system.exe.config

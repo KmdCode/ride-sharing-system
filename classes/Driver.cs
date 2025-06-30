@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ride_sharing_system.classes
 {
-    class Ride
+    internal class Driver
     {
-        string PassengerName { get; set; }
-        string DriverName { get; set; }
-        int Distance { get; set; }
-        decimal Cost { get; set; }
-
     }
 }
