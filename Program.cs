@@ -11,9 +11,12 @@ namespace Ride_sharing_system
     {
 
         List<Passenger> passengers = new List<Passenger>();
+        List<Driver> drivers = new List<Driver>();
 
         static void Main(string[] args)
         {
+
+
 
         }
 
@@ -28,6 +31,20 @@ namespace Ride_sharing_system
             Passenger temp = new Passenger(name, email, password);
 
             passengers.Add(temp);
+            Console.WriteLine("User registered");
+        }
+
+        public void RegisterDriver()
+        {
+            Console.Write("Enter Name: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter Email: ");
+            string email = Console.ReadLine();
+            Console.Write("Enter Password: ");
+            string password = Console.ReadLine();
+            Driver temp = new Driver(name, email, password);
+
+            drivers.Add(temp);
             Console.WriteLine("User registered");
         }
     }
