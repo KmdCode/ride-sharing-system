@@ -10,8 +10,8 @@ namespace Ride_sharing_system.classes
         public DateTime RequestedAt { get; set; }
         public string Status { get; set; } = "Pending";
 
-        public double DistanceKm { get; set; }
-        public double Cost { get; set; }
+        public decimal DistanceKm { get; set; }
+        public decimal Cost { get; set; }
         public string AssignedDriverEmail { get; set; }
 
         private static readonly Random rand = new Random();

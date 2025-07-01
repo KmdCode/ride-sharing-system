@@ -4,10 +4,10 @@
     "PickupLocation": "pta",
     "Destination": "dbn",
     "RequestedAt": "2025-06-30T23:43:41.2794099+02:00",
-    "Status": "Pending",
+    "Status": "Completed",
     "DistanceKm": 0,
     "Cost": 0,
-    "AssignedDriverEmail": null
+    "AssignedDriverEmail": "kr"
   },
   {
     "PassengerEmail": "aa",
@@ -68,5 +68,25 @@
     "DistanceKm": 20,
     "Cost": 40,
     "AssignedDriverEmail": "ww"
+  },
+  {
+    "PassengerEmail": "aa",
+    "PickupLocation": "nmu",
+    "Destination": "tut",
+    "RequestedAt": "2025-07-01T16:34:32.5441177+02:00",
+    "Status": "Pending",
+    "DistanceKm": 15,
+    "Cost": 30,
+    "AssignedDriverEmail": null
+  },
+  {
+    "PassengerEmail": "oo",
+    "PickupLocation": "nmu",
+    "Destination": "tut",
+    "RequestedAt": "2025-07-01T16:49:52.6140199+02:00",
+    "Status": "Accepted",
+    "DistanceKm": 15,
+    "Cost": 30,
+    "AssignedDriverEmail": "ty"
   }
 ]
