@@ -12,5 +12,12 @@
     "Email": "ee",
     "Password": "ee",
     "Role": "passenger"
+  },
+  {
+    "Balance": 0,
+    "Name": "tt",
+    "Email": "tt",
+    "Password": "tt",
+    "Role": "passenger"
   }
 ]

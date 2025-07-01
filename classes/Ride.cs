@@ -25,8 +25,8 @@ namespace Ride_sharing_system.classes
             Destination = destination;
             RequestedAt = DateTime.Now;
             Status = "Pending";
-            DistanceKm = rand.Next(5, 21); // random between 5 and 20 km
-            Cost = DistanceKm * 2; // simple cost formula
+            DistanceKm = rand.Next(5, 21);
+            Cost = DistanceKm * 2;
             AssignedDriverEmail = null;
         }
     }
