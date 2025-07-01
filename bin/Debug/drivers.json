@@ -1,23 +1,37 @@
 [
   {
-    "Balance": 0,
-    "Name": "bb",
-    "Email": "bb",
-    "Password": "bb",
-    "Role": "driver"
+    "Balance": 333,
+    "Name": "aa",
+    "Email": "aa",
+    "Password": "aa",
+    "Role": "passenger"
   },
   {
     "Balance": 0,
-    "Name": "ww",
-    "Email": "ww",
-    "Password": "ww",
-    "Role": "driver"
+    "Name": "ee",
+    "Email": "ee",
+    "Password": "ee",
+    "Role": "passenger"
   },
   {
     "Balance": 0,
-    "Name": "Bonolo",
-    "Email": "bonolo@email.com",
-    "Password": "12345",
-    "Role": "driver"
+    "Name": "tt",
+    "Email": "tt",
+    "Password": "tt",
+    "Role": "passenger"
+  },
+  {
+    "Balance": 200,
+    "Name": "pp",
+    "Email": "pp",
+    "Password": "123456",
+    "Role": "passenger"
+  },
+  {
+    "Balance": 333,
+    "Name": "aa",
+    "Email": "aa",
+    "Password": "aa",
+    "Role": "passenger"
   }
 ]

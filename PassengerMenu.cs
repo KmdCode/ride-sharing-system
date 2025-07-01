@@ -1,9 +1,10 @@
 ﻿using Ride_sharing_system.classes;
 using System;
 using System.Collections.Generic;
-using System.Text.Json;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text.Json;
 
 namespace Ride_sharing_system.Menus
 {
@@ -14,12 +15,13 @@ namespace Ride_sharing_system.Menus
             int option = 0;
             while (option != 4)
             {
-                Console.WriteLine("\nPassenger Menu:");
+                Console.WriteLine("Passenger Menu:");
                 Console.WriteLine("1. View Balance");
                 Console.WriteLine("2. View Profile");
-                Console.WriteLine("3. Request Ride");
-                Console.WriteLine("4. Ride History");
-                Console.WriteLine("5. Logout");
+                Console.WriteLine("3. Deposit funds");
+                Console.WriteLine("4. Request Ride");
+                Console.WriteLine("5. Ride History");
+                Console.WriteLine("6. Logout");
                 Console.Write("Choose option: ");
                 option = Convert.ToInt32(Console.ReadLine());
 
@@ -32,13 +34,16 @@ namespace Ride_sharing_system.Menus
                         Console.WriteLine($"Name: {passenger.Name}\nEmail: {passenger.Email}");
                         break;
                     case 3:
-                        RequestRide(passenger);
+                        AddFunds(passenger);
                         break;
                     case 4:
-                        ViewRideHistory(passenger);
+                        RequestRide(passenger);
                         break;
                     case 5:
-                        Console.WriteLine("Logging out...");
+                        ViewRideHistory(passenger);
+                        break;
+                    case 6:
+                        Console.WriteLine("Logging out");
                         break;
                     default:
                         Console.WriteLine("Invalid option");
@@ -90,6 +95,53 @@ namespace Ride_sharing_system.Menus
             {
                 var ride = myRides[i];
                 Console.WriteLine($"[{i + 1}] Pickup: {ride.PickupLocation}, Destination: {ride.Destination}, Distance: {ride.DistanceKm}km, Cost: R{ride.Cost}");
+            }
+        }
+        
+        public static void ViewBalance(Passenger passenger)
+        {
+            if (!File.Exists("passengers.json"))
+            {
+                Console.WriteLine("No passengers available");
+                return;
+            }
+
+            string json = File.ReadAllText("passengers.json");
+            List<Passenger> users = JsonSerializer.Deserialize<List<Passenger>>(json) ?? new List<Passenger>();
+
+            var user = users.FirstOrDefault(p => p.Email == passenger.Email);
+
+            if (user != null)
+            {
+                Console.WriteLine($"Available Balance: {passenger.Balance}");
+                PassengerMenu.Show(passenger);
+                return;
+            }
+        }
+
+        public static void AddFunds(Passenger passenger)
+        {
+            if (!File.Exists("passengers.json"))
+            {
+                Console.WriteLine("No passengers available");
+                return;
+            }
+            
+            string json = File.ReadAllText("passengers.json");
+            List<Passenger> users = JsonSerializer.Deserialize<List<Passenger>>(json) ?? new List<Passenger>();
+
+            var user = users.FirstOrDefault(p => p.Email == passenger.Email);
+
+            if (user != null)
+            {
+                Console.Write("Enter amount to add to balance :");
+                decimal funds = Convert.ToDecimal(Console.ReadLine());
+                user.AddFunds(funds);
+                Console.WriteLine($"{funds} successfully added");
+                Console.WriteLine("Current balance: R" + user.Balance);
+                File.WriteAllText("passengers.json", JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true }));
+                PassengerMenu.Show(user);
+                return;
             }
         }
     }
