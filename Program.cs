@@ -52,7 +52,7 @@ namespace Ride_sharing_system
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error reading passenger data: " + ex.Message);
+                Console.WriteLine(ex.Message);
                 passengers = new List<Passenger>();
             }
 
@@ -65,7 +65,7 @@ namespace Ride_sharing_system
 
             Passenger temp = new Passenger(name, email, password);
             passengers.Add(temp);
-            Console.WriteLine("Passenger registered.");
+            Console.WriteLine("Passenger registered");
 
             File.WriteAllText("passengers.json", JsonSerializer.Serialize(passengers, new JsonSerializerOptions { WriteIndented = true }));
         }
@@ -95,7 +95,7 @@ namespace Ride_sharing_system
 
             Driver temp = new Driver(name, email, password);
             drivers.Add(temp);
-            Console.WriteLine("Driver registered.");
+            Console.WriteLine("Driver registered");
 
             File.WriteAllText("drivers.json", JsonSerializer.Serialize(drivers, new JsonSerializerOptions { WriteIndented = true }));
         }
@@ -119,7 +119,7 @@ namespace Ride_sharing_system
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error loading data: " + ex.Message);
+                Console.WriteLine(ex.Message);
                 return;
             }
 
