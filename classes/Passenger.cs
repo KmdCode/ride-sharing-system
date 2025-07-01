@@ -9,8 +9,6 @@ namespace Ride_sharing_system.classes
 {
     internal class Passenger: User, IPayable
     {
-        //public string PickUp { get; set; }
-        //public string DropOff { get; set; } 
         public decimal Balance { get; set; }
 
         public Passenger(string Name, string Email, string Password)
@@ -18,7 +16,6 @@ namespace Ride_sharing_system.classes
             this.Name = Name;
             this.Email = Email;
             this.Password = Password;
-            Balance = 100;
             Role = "passenger";
         }
 

@@ -9,7 +9,7 @@ namespace Ride_sharing_system.classes
 {
     class Driver: User, IPayable
     {
-        decimal Balance {  get; set; }
+        public decimal Balance {  get; set; }
 
         public Driver(string Name, string Email, string Password)
         {

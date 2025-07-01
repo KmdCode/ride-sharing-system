@@ -1,25 +1,16 @@
 [
   {
-    "Balance": 100,
-    "Name": "p2",
-    "Email": "phj",
-    "Password": "12345",
-    "Role": null
-  }
-][
-  {
-    "Balance": 100,
+    "Balance": 0,
     "Name": "aa",
     "Email": "aa",
     "Password": "aa",
-    "Role": null
-  }
-][
+    "Role": "passenger"
+  },
   {
-    "Balance": 100,
-    "Name": "bb",
-    "Email": "bb",
-    "Password": "bb",
-    "Role": null
+    "Balance": 0,
+    "Name": "ee",
+    "Email": "ee",
+    "Password": "ee",
+    "Role": "passenger"
   }
 ]

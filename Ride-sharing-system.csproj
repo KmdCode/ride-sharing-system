@@ -78,8 +78,10 @@
     <Compile Include="classes\Passenger.cs" />
     <Compile Include="classes\Ride.cs" />
     <Compile Include="classes\User.cs" />
+    <Compile Include="DriverMenu.cs" />
     <Compile Include="interfaces\IPayable.cs" />
     <Compile Include="interfaces\IRideable.cs" />
+    <Compile Include="PassengerMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
