@@ -1,43 +1,28 @@
-RideSharingSystem/
-│
-├── Models/
-│   ├── Driver.cs
-│   ├── Passenger.cs
-│   ├── Ride.cs
-│   ├── SaveData.cs
-│   └── User.cs
-│
-├── Interfaces/
-│   ├── IPayable.cs
-│   └── IRideable.cs
-│
-├── Layouts/
-│   ├── AuthLayout.cs
-│   ├── DriverLayout.cs
-│   └── PassengerLayout.cs
-│
-├── DataAccess/
-│   └── DataManager.cs
-│
-└── Program.cs
+Ride-Sharing System
+A C# console application demonstrating object-oriented programming principles through a real-world ride-sharing platform.
 
-⚙️ System Features
-Users can register either as Passengers or Drivers. Functionality includes:
-👤 Passenger Capabilities:
-- Request a ride
-- View and top up wallet
-- Access full ride history
-🚘 Driver Capabilities:
-- Browse incoming ride requests
-- Decline rides longer than 15 km
-- Complete rides (earnings credited and passenger charged)
-- Check total earnings
-💾 Data Management:
-All app data—including users and ride records—is stored persistently using JSON serialization.
-📚 Object-Oriented Design
-- Inheritance: Passenger and Driver derive from the User abstract class.
-- Interfaces:
-- Passenger adopts IPayable (for wallet functions)
-- and IRideable (for handling ride requests).
-- Polymorphism: The base User class supports operations on Drivers and Passengers through a unified interface.
+Overview
+This system allows passengers to request rides, drivers to accept them, and administrators to manage the platform using inheritance, polymorphism, interfaces, LINQ, and exception handling.
 
+Core Features
+User Management: Register as passenger/driver with role-based menus
+Ride Requests: Location-based matching using LINQ filtering
+Payment System: Virtual wallet with distance-based pricing
+Rating System: Post-ride driver ratings with performance tracking
+
+Technical Implementation
+OOP Concepts
+Inheritance: Base User class → Passenger/Driver classes
+Interfaces: IPayable for behavioral contracts
+Polymorphism: Role-specific method implementations
+LINQ: Driver filtering, data queries, statistical analysis
+Menu Structure
+Main: Register, Login, Exit
+Passenger: Request ride, view wallet, add funds, rate driver
+Driver: View requests, accept/complete rides, view earnings
+
+Getting Started
+Open in Visual Studio/VS Code
+Build and run the console application
+Register as passenger or driver
+Use menu options to request/accept rides
