@@ -1,14 +1,23 @@
 [
   {
+    "Balance": 0,
     "Name": "bb",
     "Email": "bb",
     "Password": "bb",
     "Role": "driver"
   },
   {
+    "Balance": 0,
     "Name": "ww",
     "Email": "ww",
     "Password": "ww",
+    "Role": "driver"
+  },
+  {
+    "Balance": 0,
+    "Name": "Bonolo",
+    "Email": "bonolo@email.com",
+    "Password": "12345",
     "Role": "driver"
   }
 ]

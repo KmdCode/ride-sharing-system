@@ -107,14 +107,14 @@ namespace Ride_sharing_system
             {
                 if (File.Exists("passengers.json"))
                 {
-                    string pjson = File.ReadAllText("passengers.json");
-                    passengers = JsonSerializer.Deserialize<List<Passenger>>(pjson) ?? new List<Passenger>();
+                    string passengerJson = File.ReadAllText("passengers.json");
+                    passengers = JsonSerializer.Deserialize<List<Passenger>>(passengerJson) ?? new List<Passenger>();
                 }
 
                 if (File.Exists("drivers.json"))
                 {
-                    string djson = File.ReadAllText("drivers.json");
-                    drivers = JsonSerializer.Deserialize<List<Driver>>(djson) ?? new List<Driver>();
+                    string driverJson = File.ReadAllText("drivers.json");
+                    drivers = JsonSerializer.Deserialize<List<Driver>>(driverJson) ?? new List<Driver>();
                 }
             }
             catch (Exception ex)

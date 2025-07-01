@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.IO;
+using System.Linq;
 
 namespace Ride_sharing_system.Menus
 {
@@ -17,7 +18,8 @@ namespace Ride_sharing_system.Menus
                 Console.WriteLine("1. View Balance");
                 Console.WriteLine("2. View Profile");
                 Console.WriteLine("3. Request Ride");
-                Console.WriteLine("4. Logout");
+                Console.WriteLine("4. Ride History");
+                Console.WriteLine("5. Logout");
                 Console.Write("Choose option: ");
                 option = Convert.ToInt32(Console.ReadLine());
 
@@ -33,6 +35,9 @@ namespace Ride_sharing_system.Menus
                         RequestRide(passenger);
                         break;
                     case 4:
+                        ViewRideHistory(passenger);
+                        break;
+                    case 5:
                         Console.WriteLine("Logging out...");
                         break;
                     default:
@@ -65,6 +70,27 @@ namespace Ride_sharing_system.Menus
             File.WriteAllText("rides.json", JsonSerializer.Serialize(rides, new JsonSerializerOptions { WriteIndented = true }));
 
             Console.WriteLine("Ride requested successfully");
+        }
+
+        public static void ViewRideHistory(Passenger passenger)
+        {
+            if (!File.Exists("rides.json"))
+            {
+                Console.WriteLine("No rides available.");
+                return;
+            }
+
+            string json = File.ReadAllText("rides.json");
+            List<Ride> rides = JsonSerializer.Deserialize<List<Ride>>(json) ?? new List<Ride>();
+
+            var myRides = rides.Where(r => r.PassengerEmail == passenger.Email).ToList();
+
+            Console.WriteLine("Ride History:");
+            for (int i = 0; i < myRides.Count; i++)
+            {
+                var ride = myRides[i];
+                Console.WriteLine($"[{i + 1}] Pickup: {ride.PickupLocation}, Destination: {ride.Destination}, Distance: {ride.DistanceKm}km, Cost: R{ride.Cost}");
+            }
         }
     }
 }
