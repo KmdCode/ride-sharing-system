@@ -64,7 +64,7 @@ namespace Ride_sharing_system.Menus
 
             File.WriteAllText("rides.json", JsonSerializer.Serialize(rides, new JsonSerializerOptions { WriteIndented = true }));
 
-            Console.WriteLine("Ride requested successfully!");
+            Console.WriteLine("Ride requested successfully");
         }
     }
 }

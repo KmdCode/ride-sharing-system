@@ -14,7 +14,7 @@ namespace Ride_sharing_system.Menus
             int option = 0;
             while (option != 4)
             {
-                Console.WriteLine("\nDriver Menu:");
+                Console.WriteLine("Driver Menu:");
                 Console.WriteLine("1. View Balance");
                 Console.WriteLine("2. View Profile");
                 Console.WriteLine("3. View Available Rides");
